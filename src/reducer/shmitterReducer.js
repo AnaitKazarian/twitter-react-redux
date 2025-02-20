@@ -1,12 +1,7 @@
 import {CHANGE_NAME, CHANGE_AVATAR, CHANGE_STATS} from "../actions/shmitterActions.js";
 import {combineReducers} from "redux";
 
-const initialState = {
-    name: "Monster",
-    avatar: "https://gravatar.com/avatar/000?d=monsterid",
-};
-
-const userReducer = (state = initialState, action) => {
+const userReducer = (state = '', action) => {
     switch (action.type) {
         case CHANGE_NAME:
             return {...state, name: action.payload || state.name};
